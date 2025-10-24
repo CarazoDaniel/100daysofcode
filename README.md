@@ -53,3 +53,28 @@ The lists are very useful to access positions and replace positions on a streing
 Defining functions, parameters are used to create variables that can affect within the function. Parameters are variables that are used to call the function for even more specific cases.
 
 The Ceasar Cipher takes letters from the alphabet and shifts them by a specific amount, in order to encode or decode a message. Shifts here can be done in both senses, to decode. Symbols and other inputs are passed from one to the other, only items from the alphabet, but this could be easily modified to specific characters, making the coding even harder to decode.
+
+## Day9: Dictionaries, Nesting and Secret Auction
+
+### Dictionaries
+Dictionary is a specific sort of data that is stored as a pair of elements as key and value, the key is a specific one used to access the specific value asociated with the key.
+key -> value, it is in curly brackets and with a colon separation, elements in a doctionary are coma separated. Items can be added in the furture, as well as edited and removed, as any variable, they can be edited.
+
+### Nesting
+being able to place a disctionary or a list as a value related to a specific key on a Disctionary, is called nesting. Key and value pairs are usefull a value can be asociated with anything, and it depends on the type it is that it will be handled that way. IE to access an item in a list value, it requieres to access through the key first, then as a list.
+Lists within lists is also a type of nesting. Nested lists seems like a good way to represent a matrix.
+
+## Day10: Function Output and Calculator
+
+Simple chapter on function outputs and return statement on functions. Making a simple calculator with 2 input functions, that can go on as long as the user wants.
+
+### Docstrings
+
+On defined functions, the first line usually is filled with a string declared with 3 quotes, this line shows when calling the function. With a simple description, this goes a long way to show clarity on bigger projects.
+
+## Day11: Blackjack
+A simple version of blackjack, using infinite deck and no jockers. All cards on the list are equal probability and the cards are not removed as they are drawn. The computer is the dealer.
+
+## Day12: Guessing Game
+Just a guessing game, with random number creation and different dificulties. Using local and global scope as well as global constants and afecting global variables.
+
