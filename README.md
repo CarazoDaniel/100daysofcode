@@ -78,3 +78,7 @@ A simple version of blackjack, using infinite deck and no jockers. All cards on 
 ## Day12: Guessing Game
 Just a guessing game, with random number creation and different dificulties. Using local and global scope as well as global constants and afecting global variables.
 
+## Day13: Debugging
+A quick guide on how to use breakpoint line by line, go into with libraries or skipping libraries. Using print to confirm statements or values within the code, as well as using the debugger for step by step review. Stackoverflow and other reviews can also be done to achieve the best results on more complicated scenarios. Taking breaks and asking for external reviews might also prove to be a valuable tool.
+
+The main focus here is reviewing code can be dificult, but the try/exceptions are good tools to avoid input errors on working code, and debugging on step by step is one of the most powerful tools to check not working code.
