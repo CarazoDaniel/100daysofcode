@@ -82,3 +82,11 @@ Just a guessing game, with random number creation and different dificulties. Usi
 A quick guide on how to use breakpoint line by line, go into with libraries or skipping libraries. Using print to confirm statements or values within the code, as well as using the debugger for step by step review. Stackoverflow and other reviews can also be done to achieve the best results on more complicated scenarios. Taking breaks and asking for external reviews might also prove to be a valuable tool.
 
 The main focus here is reviewing code can be dificult, but the try/exceptions are good tools to avoid input errors on working code, and debugging on step by step is one of the most powerful tools to check not working code.
+
+## Day14: Higher Lower Game
+This is the first project with no specific topics before, just a description and example.
+This is a comparing game, where you lose when you miss the correct answer
+
+## Day15: Coffee Machine
+Implementing a coffee machine simulator, with resources, different menu items to be handled diferently and a coin based system of pay, which is supposed accept or reject payments.
+All functions made with the Menu in data, so adding new itmes is a posibility, as well as removing.
