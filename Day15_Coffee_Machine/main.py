@@ -42,7 +42,7 @@ def payment(selection):
         print('payment succesful.')
         resources['money'] += MENU[selection]['cost']
         print(f'you payed {total}')
-        print(f'Your change is :{total - MENU[selection]['cost']}')
+        print(f'Your change is :{round(total - MENU[selection]['cost'],2)}$')
         return True
     else:
         print('It seems you have not payed the proper ammount')
@@ -55,7 +55,7 @@ def make_drink(selection):
     '''recieves the type of drink, returns true if completed.'''
     for key, value in MENU[selection]['ingredients'].items():
         if resources[key] < MENU[selection]['ingredients'][key]:
-            print('Resources are limited, we cannot finish your drink')
+            print(f'Resources are limited, we cannot finish your drink due to {key}')
             return False
     if payment(selection):
         for key, value in MENU[selection]['ingredients'].items():
