@@ -90,3 +90,6 @@ This is a comparing game, where you lose when you miss the correct answer
 ## Day15: Coffee Machine
 Implementing a coffee machine simulator, with resources, different menu items to be handled diferently and a coin based system of pay, which is supposed accept or reject payments.
 All functions made with the Menu in data, so adding new itmes is a posibility, as well as removing.
+
+## Day 16: Object Oriented Programing
+Creating specific classes and objects that can be modified and used acordingly to make the coffee machine in a more detailed, sustainable and scalable way.
