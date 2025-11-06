@@ -92,4 +92,9 @@ Implementing a coffee machine simulator, with resources, different menu items to
 All functions made with the Menu in data, so adding new itmes is a posibility, as well as removing.
 
 ## Day 16: Object Oriented Programing
+
+Object oriented programing means the existance of building blocks for futher use, called objects, that have specific methods to do specific actions or changes within the specific object. Such as a car, having a specific color, acceleration, speed etc.
+The car might be a good example, but using the [turtle](https://docs.python.org/3/library/turtle.html) built in package for python is a good example to learn the specifics of classes and methods.
+We will build the coffee machine with an object oriented variation.
+
 Creating specific classes and objects that can be modified and used acordingly to make the coffee machine in a more detailed, sustainable and scalable way.
