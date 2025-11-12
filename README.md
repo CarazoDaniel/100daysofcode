@@ -98,3 +98,8 @@ The car might be a good example, but using the [turtle](https://docs.python.org/
 We will build the coffee machine with an object oriented variation.
 
 Creating specific classes and objects that can be modified and used acordingly to make the coffee machine in a more detailed, sustainable and scalable way.
+
+## Day 17: Quiz game OOP
+Using the objet oriented method to build a question class that can read and save data from a dictionary type file, easily modifiable from JSON files, obteined from [Open Trivia](https://opentdb.com/), the quiz questions can be easily modified with a simple mod to the JSON file.
+Using a quiz structure that provides the next question, validats the answer and keeps track of the score.
+This is a good example of how OOP provides proper scalability for projects, as parts work independant from each other and can be modified acordingly.
