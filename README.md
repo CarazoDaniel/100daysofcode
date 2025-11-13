@@ -103,3 +103,7 @@ Creating specific classes and objects that can be modified and used acordingly t
 Using the objet oriented method to build a question class that can read and save data from a dictionary type file, easily modifiable from JSON files, obteined from [Open Trivia](https://opentdb.com/), the quiz questions can be easily modified with a simple mod to the JSON file.
 Using a quiz structure that provides the next question, validats the answer and keeps track of the score.
 This is a good example of how OOP provides proper scalability for projects, as parts work independant from each other and can be modified acordingly.
+
+## Day 18: Turtle graphics
+Turtle module works with the GUI, graphical user interface. Using the Turtle GUI, to do coding challenges before a final program. The first challenge being the easiest, drawing a square, the second a dashed line. The third is a color changing polygon, which requieres the randomize. The fourth is a [Random Walk](https://en.wikipedia.org/wiki/Random_walk), moving straig in different directions a specific amount of times, chaging color and directions.
+Challenge 1: simple square draw. Challenge 2: draw a dashed line. Challenge 3: draw poligons sharing a side. Challenge 4: random walk. Challenge 5: concentric circles to complete a circle.
