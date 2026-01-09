@@ -133,4 +133,49 @@ then use the needed pip install, and to run, .venv/bin/pyton3 is requiered for a
 
 ## Day 19: Instances, State and Higher Order Functions
 
+Object, clases can be instanced multiple timnes, each having it own state. Thus using multiple objects of the same class, in different specific states.
+Higher order functions, are refered to those functions that recieve a function as part of their input, to be used within the function.
+In day 19, we build 2 projects, a turtles race and an Etch-a-sketch. Both using the turtle package.
 
+## Day 20: Snake Game part 1:
+
+Using turtle package and time package to make a snake, that moves through the screen. updating the screen after movement, and moving all to a snake class, as to make it in the object oriented programing fashion
+
+## Day 21: Finishing the Snake game:
+
+Using the turtle package, finishing the snake game. This leason talks about inheritance, used in the "child" class or method, almost as an argument to the class and super as a method to call the same method from the parent.
+Slicing [start:finish:pase] neg pase reverses the slicing
+
+## Day 22: Pong the arcade game
+
+Again, with the turtle package, building an object oriente version of Pong.
+
+## Day 23: Frogger
+
+Similar to the Frogger game, cars and a turtle that can move forward. No lanes, no side movement or back, and no matter for superposition on cars.
+
+## Day 24: Snake and files
+
+Using the prvious snake game, to make a game that does not end, and keeps track of the highest score on a separate file, so that it can be viewed and modified any time. Starting with scorekeeping and moving to a more complexe file reading and writing mechanism, with a program that writes emails from a template and a list of names.
+
+## Day 25: Pandas and Squirrel Census
+
+Using panda, from CSV you can get datasets to dataframes and dataseries, which each in turn can interact differently with pandas structures. getting statistical tools and calculations with much ease than simply reading files with python file opener, and even being able to create new dataframes and files.
+Pandas is a fairly powerfull tool.
+
+States game, using turtle and a csv file of names and locations to make a guessing game of all 50 states, they autopopulate on map when guessed correctly. Using pandas to handle the dataframe from the file, and properly handle adding the names.
+## Day 26: List comprehension and NATO alphabet
+
+Upgrading the States game with list comprehension. In my specific scenario, removed a for loop, but no list is created with any for loops to move as a list comprehension.
+
+Using list comprehension with dataframes to create new complex lists or dicctionaries.
+
+## Day 27: Tkinter *args **kwargs and GUI
+
+Tkinter graphics interface,  using args and kwargs for diferent functions, *args refering to multiple arguments that already have a specific initial value when needed and kwargs for defining entries, basically giving a list of name and value for the function. If defined within the function, this will be used within, it is implemented for complexe functions/packages. 
+The tkinter package as it is addapted from an older model it is easier to follow this less descriptive function use, and have utilities on the documentation.
+
+
+## Day 28: Tkinter pomodoro timer
+
+A complete timer app that pops to the foreground when finished a 25min timer, to prompt for a break, the idea is to encourage following the pomodoro method for working times.
