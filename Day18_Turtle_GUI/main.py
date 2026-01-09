@@ -20,33 +20,34 @@ extracted_rgbs = [(202, 164, 110), (149, 75, 50), (222, 201, 136), (53, 93, 123)
                     (36, 60, 74), (19, 86, 89), (82, 148, 129), (147, 17, 19), (27, 68, 102), (12, 70, 64), 
                     (107, 127, 153), (176, 192, 208), (168, 99, 102), (66, 64, 60), (219, 178, 183), (178, 198, 202)
                     , (112, 139, 141), (254, 194, 0)]
+NUM_DOTS = 30
+DOT_SIZE = 10
 
 screen = t.Screen()
 screen.clearscreen()
 tom = t.Turtle()
-tom.shape('circle')
 tom.hideturtle()
 tom.speed(0)
 t.colormode(255)
-tom.pensize(20)
+tom.pensize(DOT_SIZE)
 tom.teleport(-250,-250) 
 
 def new_color():
     tom.pencolor(random.choice(extracted_rgbs))
 
 
-for _ in range(10):
-    for i in range(10):
+for _ in range(NUM_DOTS):
+    for i in range(NUM_DOTS):
         new_color()
         tom.pendown()
         tom.forward(1)
         tom.penup()
-        tom.forward(50)
+        tom.forward(500/NUM_DOTS)
     tom.penup()
     tom.left(90)
-    tom.forward(50)
+    tom.forward(500/NUM_DOTS)
     tom.left(90)
-    tom.forward(510)
+    tom.forward(500+NUM_DOTS)
     tom.left(180)
 
 
