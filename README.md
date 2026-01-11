@@ -179,3 +179,10 @@ The tkinter package as it is addapted from an older model it is easier to follow
 ## Day 28: Tkinter pomodoro timer
 
 A complete timer app that pops to the foreground when finished a 25min timer, to prompt for a break, the idea is to encourage following the pomodoro method for working times.
+
+
+## Day 29: Tkinter password manager
+
+Complete app to add new passwords or modify passwords for websites, on a saved file. Able to generate new passwords, following most website password rules, able to modify the rules as needed.
+
+
