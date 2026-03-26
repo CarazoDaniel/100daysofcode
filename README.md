@@ -8,7 +8,7 @@ Inputs and printing, not much to say, straightforward naming and simple printing
 
 Simple math and strings, fstring add variables as a {x} easy imput for variables, ** used for pot calc and // for ecludian div, as well as python following PEDMAS.
 round() and type casting is used for specific scenarios, str() to convert to string, and int()
-Code is a simple bill calculator with tip and equal part division. 
+Code is a simple bill calculator with tip and equal part division.
 
 ## Day3: Control Flow and Logical Operators
 
@@ -19,7 +19,7 @@ treasure island, is a basic input game controlled by if statements and some art.
 
 ## Day4: Randomisation and Python Lists
 
-### Modules 
+### Modules
 
 Importing [random module](https://docs.python.org/3/library/random.html) to use random functions.
 Modules are used to separate different specific functions or packages of fucntions to be used by others, random is one created by the Python team.
@@ -137,11 +137,11 @@ Object, clases can be instanced multiple timnes, each having it own state. Thus 
 Higher order functions, are refered to those functions that recieve a function as part of their input, to be used within the function.
 In day 19, we build 2 projects, a turtles race and an Etch-a-sketch. Both using the turtle package.
 
-## Day 20: Snake Game part 1:
+## Day 20: Snake Game part 1
 
 Using turtle package and time package to make a snake, that moves through the screen. updating the screen after movement, and moving all to a snake class, as to make it in the object oriented programing fashion
 
-## Day 21: Finishing the Snake game:
+## Day 21: Finishing the Snake game
 
 Using the turtle package, finishing the snake game. This leason talks about inheritance, used in the "child" class or method, almost as an argument to the class and super as a method to call the same method from the parent.
 Slicing [start:finish:pase] neg pase reverses the slicing
@@ -164,6 +164,7 @@ Using panda, from CSV you can get datasets to dataframes and dataseries, which e
 Pandas is a fairly powerfull tool.
 
 States game, using turtle and a csv file of names and locations to make a guessing game of all 50 states, they autopopulate on map when guessed correctly. Using pandas to handle the dataframe from the file, and properly handle adding the names.
+
 ## Day 26: List comprehension and NATO alphabet
 
 Upgrading the States game with list comprehension. In my specific scenario, removed a for loop, but no list is created with any for loops to move as a list comprehension.
@@ -172,17 +173,63 @@ Using list comprehension with dataframes to create new complex lists or dicction
 
 ## Day 27: Tkinter *args **kwargs and GUI
 
-Tkinter graphics interface,  using args and kwargs for diferent functions, *args refering to multiple arguments that already have a specific initial value when needed and kwargs for defining entries, basically giving a list of name and value for the function. If defined within the function, this will be used within, it is implemented for complexe functions/packages. 
+Tkinter graphics interface,  using args and kwargs for diferent functions, *args refering to multiple arguments that already have a specific initial value when needed and kwargs for defining entries, basically giving a list of name and value for the function. If defined within the function, this will be used within, it is implemented for complexe functions/packages.
 The tkinter package as it is addapted from an older model it is easier to follow this less descriptive function use, and have utilities on the documentation.
-
 
 ## Day 28: Tkinter pomodoro timer
 
 A complete timer app that pops to the foreground when finished a 25min timer, to prompt for a break, the idea is to encourage following the pomodoro method for working times.
 
-
 ## Day 29: Tkinter password manager
 
 Complete app to add new passwords or modify passwords for websites, on a saved file. Able to generate new passwords, following most website password rules, able to modify the rules as needed.
 
+## Day 30: Exception handling
 
+When talking about Exceptions, it is what can go wrong but algo what might, could and maybe the unpredictable, but the main goal of an exception is to catch anything that might not work as intended by the use of any external input, or anything of the sort (IE the calculator trying to divide by 0). Files not found, not created or missing might also be a common to find. This day we added a layer of exception for file handling to the password manager and to the nato phonetics program.
+
+## Day 31: Card Game
+
+Using Tkinter, images and exception handling, created a program that helps study a language. Dowloading a database of the most common words of a language from [a git repo](https://github.com/hermitdave/FrequencyWords), then translating it with google sheets translate tool, and reducing the amount of words to a desired ammount. The program in this case uses the database of words and their translation to show words and the their translation and let you answer if the word has already been memorized. Non memorized words can be shown again, while already known words will be removed from the rotation, extracting data and saving a new file that will be checked for user progress each time.
+
+## Day 32: Birthday emailer
+
+Using a new email account, showing how to connect an email account to be able to access it and send emails with messages from files to different emails. Then being able to host and run this dayly on [a dedicated python hosting website](https://www.pythonanywhere.com/). I chose not to do this, to avoid passwords and emails on the code.
+
+## Day 33: ISS Overhead Notifier
+
+building an email notofier with the ISS position [API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) ussing the [requests](https://docs.python-requests.org/en/latest/) library to handle the API request. [A quick guide on HTTP response codes](https://www.webfx.com/web-development/glossary/http-status-codes/).
+Also building a quick Kanye quotes Tkinter program, with the [Kanye quote API](https://kanye.rest/)
+
+## Day 34: Quizzler
+
+The quizzler app is one build from the true or false question game, pulling new question from the API and using tkinter to update the UI to a grafics one. Being able to keep score, get right and wrong answers and dissable buttons at the end of questions. The main implementation is the new UI and API calls with simple updates that can keep using the previously completed project.
+
+## Day 35: Rain Notifier
+
+Uses the OpenWeatherMap API to get data about forecast, setting a keyed API, and then a keyed service for SMSs or whatsapp API with twilio. Being able to notify while reviewing a more complicated API that is the openwethermap, as it contains lots of different data.
+Using enviroment variables to save keys and important data is key here, as it saves from exposure when publishing code. Even with free accounts, keys should not be public.
+In windows the variables must be saved, and can be accessed with the same os library.
+> $env: DCA_PHONE = 55554444111
+
+## Day 36: Stock trading News Alert
+
+Using stock exchange API to track changes from closing days, to check for large change trends and review related news, to alert the user with news on large changes.
+
+## Day 37: Pixela Habit tracker
+
+Usin API [Pixela](https://pixe.la/v1/users) to make an activity tracker, this is a color dots graph in the style of the git commitments tracker.
+
+## Day 38: Excercise tracker
+
+Usin the Sheety API to handle a read and write google sheets document. Using the Udemy natural language LLM to read an input and get the type of activity, time and estimated calorie consumption to write the sheet acordingly.
+
+## Day 39: Flight deal tracker
+
+Capstone project, using several API to build different classes to handle a sheet database, a city API to get info, a Serpapi to search for floght prices and telegrams API to use my personal bot for notifications on deals. This usses different APIs and a .env file to handle info outside of publication. Asi this is intended for Git, the .env file compiles API keys and personal urls.
+This project uses the [Ailabs](https://airlabs.co/docs/) API to search from the city name, the IATA code for the city. Then using the date time, the search is done for a 2 week travel set to be done 2 weeks from the day it is run. Using a constant as a departure city and the dates that can be modified if needed, using the [SerpApi](https://serpapi.com/google-flights-api) service of google flights search, getting the best flight from google flights result, as the price to compare to the set threshold.
+After comparison, the notifier class is used to notify the user using a personal bot channel.
+
+## Day 40: Flight price emailer
+
+This is the end of the capstone project, changing the deal tracker to be a person list emailer. Using a google form, to link to the sheet, adding personal info to a new sheet, for the notifier class to be modified and use the email connection API to send an email to each person, with the flight deals available at the run time, again a 2 week flight, in 2 weeks time from when the code is run.
