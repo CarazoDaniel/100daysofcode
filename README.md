@@ -1,124 +1,107 @@
 # 100 Days of coding complete python bootcamp
 
-## Day1: Variables
+## Day 40: Flight price emailer
 
-Inputs and printing, not much to say, straightforward naming and simple printing.
+This is the end of the capstone project, changing the deal tracker to be a person list emailer. Using a google form, to link to the sheet, adding personal info to a new sheet, for the notifier class to be modified and use the email connection API to send an email to each person, with the flight deals available at the run time, again a 2 week flight, in 2 weeks time from when the code is run.
 
-## Day2: Data types and manipulating Strings
+## Day 39: Flight deal tracker
 
-Simple math and strings, fstring add variables as a {x} easy imput for variables, ** used for pot calc and // for ecludian div, as well as python following PEDMAS.
-round() and type casting is used for specific scenarios, str() to convert to string, and int()
-Code is a simple bill calculator with tip and equal part division.
+Capstone project, using several API to build different classes to handle a sheet database, a city API to get info, a Serpapi to search for floght prices and telegrams API to use my personal bot for notifications on deals. This usses different APIs and a .env file to handle info outside of publication. Asi this is intended for Git, the .env file compiles API keys and personal urls.
+This project uses the [Ailabs](https://airlabs.co/docs/) API to search from the city name, the IATA code for the city. Then using the date time, the search is done for a 2 week travel set to be done 2 weeks from the day it is run. Using a constant as a departure city and the dates that can be modified if needed, using the [SerpApi](https://serpapi.com/google-flights-api) service of google flights search, getting the best flight from google flights result, as the price to compare to the set threshold.
+After comparison, the notifier class is used to notify the user using a personal bot channel.
 
-## Day3: Control Flow and Logical Operators
+## Day 38: Excercise tracker
 
-">" greater than, and ">=" greater or equal, use == and != for equal and not equal. Reminder of modulo division (residual of euclidian division) "%".
-Using if and elif, second conditionals with nested if statements.
-Logical operators, and or not (&& || !)
-treasure island, is a basic input game controlled by if statements and some art.
+Usin the Sheety API to handle a read and write google sheets document. Using the Udemy natural language LLM to read an input and get the type of activity, time and estimated calorie consumption to write the sheet acordingly.
 
-## Day4: Randomisation and Python Lists
+## Day 37: Pixela Habit tracker
 
-### Modules
+Usin API [Pixela](https://pixe.la/v1/users) to make an activity tracker, this is a color dots graph in the style of the git commitments tracker.
 
-Importing [random module](https://docs.python.org/3/library/random.html) to use random functions.
-Modules are used to separate different specific functions or packages of fucntions to be used by others, random is one created by the Python team.
-Creating personal modules are imported and used as any other, with import function and calling variables or functions with the name pf the module and the item to use.
+## Day 36: Stock trading News Alert
 
-### Lists
+Using stock exchange API to track changes from closing days, to check for large change trends and review related news, to alert the user with news on large changes.
 
-[Lists](https://docs.python.org/3/tutorial/datastructures.html) are powerful datasets in python, being able to view specific items, add modify and substract on different positions. A list is stored in the specific order it is created.
-Lists can be nested to create more complex structures.
+## Day 35: Rain Notifier
 
-## Day5: Python Loops
+Uses the OpenWeatherMap API to get data about forecast, setting a keyed API, and then a keyed service for SMSs or whatsapp API with twilio. Being able to notify while reviewing a more complicated API that is the openwethermap, as it contains lots of different data.
+Using enviroment variables to save keys and important data is key here, as it saves from exposure when publishing code. Even with free accounts, keys should not be public.
+In windows the variables must be saved, and can be accessed with the same os library.
+> $env: DCA_PHONE = 55554444111
 
-Use of for loop in python, general usage, "for in"  goes thru items in a list or numbers in a range, for numbered iterations.
+## Day 34: Quizzler
 
-A Random password generator asking for n of letter, symbols and numbers, then randomizing between selected random of each.
+The quizzler app is one build from the true or false question game, pulling new question from the API and using tkinter to update the UI to a grafics one. Being able to keep score, get right and wrong answers and dissable buttons at the end of questions. The main implementation is the new UI and API calls with simple updates that can keep using the previously completed project.
 
-## Day6: Funtions and Karel
+## Day 33: ISS Overhead Notifier
 
-### while loop
+building an email notofier with the ISS position [API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) ussing the [requests](https://docs.python-requests.org/en/latest/) library to handle the API request. [A quick guide on HTTP response codes](https://www.webfx.com/web-development/glossary/http-status-codes/).
+Also building a quick Kanye quotes Tkinter program, with the [Kanye quote API](https://kanye.rest/)
 
-This kind of loop is not defined to stop unless a scenario is met, during the loop definition this condition should considered.
+## Day 32: Birthday emailer
 
-### Funtions
+Using a new email account, showing how to connect an email account to be able to access it and send emails with messages from files to different emails. Then being able to host and run this dayly on [a dedicated python hosting website](https://www.pythonanywhere.com/). I chose not to do this, to avoid passwords and emails on the code.
 
-In python, to define a new function, def is used to announce said definition.
-Defining funtions does not make the be executed, as usual thi is used to define specific scenario functions and calling them for the requiered specific use.
-[Using Reeborgs World](https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json), to show use case of loops and function definitions.
+## Day 31: Card Game
 
-## Day7: Hangman
+Using Tkinter, images and exception handling, created a program that helps study a language. Dowloading a database of the most common words of a language from [a git repo](https://github.com/hermitdave/FrequencyWords), then translating it with google sheets translate tool, and reducing the amount of words to a desired ammount. The program in this case uses the database of words and their translation to show words and the their translation and let you answer if the word has already been memorized. Non memorized words can be shown again, while already known words will be removed from the rotation, extracting data and saving a new file that will be checked for user progress each time.
 
-Starting all projects with a flowchart to properly review the steps requiered is essential to keeping a proper order and a clear goal.
+## Day 30: Exception handling
 
-This project reviews previously learned items, except functions, strings, importing loops and validations in lists.
+When talking about Exceptions, it is what can go wrong but algo what might, could and maybe the unpredictable, but the main goal of an exception is to catch anything that might not work as intended by the use of any external input, or anything of the sort (IE the calculator trying to divide by 0). Files not found, not created or missing might also be a common to find. This day we added a layer of exception for file handling to the password manager and to the nato phonetics program.
 
-The lists are very useful to access positions and replace positions on a streing, they can be joined to be printed as a single line on console.
+## Day 29: Tkinter password manager
 
-## Day8: Function Parameters and Caesar Cipher
+Complete app to add new passwords or modify passwords for websites, on a saved file. Able to generate new passwords, following most website password rules, able to modify the rules as needed.
 
-Defining functions, parameters are used to create variables that can affect within the function. Parameters are variables that are used to call the function for even more specific cases.
+## Day 28: Tkinter pomodoro timer
 
-The Ceasar Cipher takes letters from the alphabet and shifts them by a specific amount, in order to encode or decode a message. Shifts here can be done in both senses, to decode. Symbols and other inputs are passed from one to the other, only items from the alphabet, but this could be easily modified to specific characters, making the coding even harder to decode.
+A complete timer app that pops to the foreground when finished a 25min timer, to prompt for a break, the idea is to encourage following the pomodoro method for working times.
 
-## Day9: Dictionaries, Nesting and Secret Auction
+## Day 27: Tkinter *args **kwargs and GUI
 
-### Dictionaries
+Tkinter graphics interface,  using args and kwargs for diferent functions, *args refering to multiple arguments that already have a specific initial value when needed and kwargs for defining entries, basically giving a list of name and value for the function. If defined within the function, this will be used within, it is implemented for complexe functions/packages.
+The tkinter package as it is addapted from an older model it is easier to follow this less descriptive function use, and have utilities on the documentation.
 
-Dictionary is a specific sort of data that is stored as a pair of elements as key and value, the key is a specific one used to access the specific value asociated with the key.
-key -> value, it is in curly brackets and with a colon separation, elements in a doctionary are coma separated. Items can be added in the furture, as well as edited and removed, as any variable, they can be edited.
+## Day 26: List comprehension and NATO alphabet
 
-### Nesting
+Upgrading the States game with list comprehension. In my specific scenario, removed a for loop, but no list is created with any for loops to move as a list comprehension.
 
-being able to place a disctionary or a list as a value related to a specific key on a Disctionary, is called nesting. Key and value pairs are usefull a value can be asociated with anything, and it depends on the type it is that it will be handled that way. IE to access an item in a list value, it requieres to access through the key first, then as a list.
-Lists within lists is also a type of nesting. Nested lists seems like a good way to represent a matrix.
+Using list comprehension with dataframes to create new complex lists or dicctionaries.
 
-## Day10: Function Output and Calculator
+## Day 25: Pandas and Squirrel Census
 
-Simple chapter on function outputs and return statement on functions. Making a simple calculator with 2 input functions, that can go on as long as the user wants.
+Using panda, from CSV you can get datasets to dataframes and dataseries, which each in turn can interact differently with pandas structures. getting statistical tools and calculations with much ease than simply reading files with python file opener, and even being able to create new dataframes and files.
+Pandas is a fairly powerfull tool.
 
-### Docstrings
+States game, using turtle and a csv file of names and locations to make a guessing game of all 50 states, they autopopulate on map when guessed correctly. Using pandas to handle the dataframe from the file, and properly handle adding the names.
 
-On defined functions, the first line usually is filled with a string declared with 3 quotes, this line shows when calling the function. With a simple description, this goes a long way to show clarity on bigger projects.
+## Day 24: Snake and files
 
-## Day11: Blackjack
+Using the prvious snake game, to make a game that does not end, and keeps track of the highest score on a separate file, so that it can be viewed and modified any time. Starting with scorekeeping and moving to a more complexe file reading and writing mechanism, with a program that writes emails from a template and a list of names.
 
-A simple version of blackjack, using infinite deck and no jockers. All cards on the list are equal probability and the cards are not removed as they are drawn. The computer is the dealer.
+## Day 23: Frogger
 
-## Day12: Guessing Game
+Similar to the Frogger game, cars and a turtle that can move forward. No lanes, no side movement or back, and no matter for superposition on cars.
 
-Just a guessing game, with random number creation and different dificulties. Using local and global scope as well as global constants and afecting global variables.
+## Day 22: Pong the arcade game
 
-## Day13: Debugging
+Again, with the turtle package, building an object oriente version of Pong.
 
-A quick guide on how to use breakpoint line by line, go into with libraries or skipping libraries. Using print to confirm statements or values within the code, as well as using the debugger for step by step review. Stackoverflow and other reviews can also be done to achieve the best results on more complicated scenarios. Taking breaks and asking for external reviews might also prove to be a valuable tool.
+## Day 21: Finishing the Snake game
 
-The main focus here is reviewing code can be dificult, but the try/exceptions are good tools to avoid input errors on working code, and debugging on step by step is one of the most powerful tools to check not working code.
+Using the turtle package, finishing the snake game. This leason talks about inheritance, used in the "child" class or method, almost as an argument to the class and super as a method to call the same method from the parent.
+Slicing [start:finish:pase] neg pase reverses the slicing
 
-## Day14: Higher Lower Game
+## Day 20: Snake Game part 1
 
-This is the first project with no specific topics before, just a description and example.
-This is a comparing game, where you lose when you miss the correct answer
+Using turtle package and time package to make a snake, that moves through the screen. updating the screen after movement, and moving all to a snake class, as to make it in the object oriented programing fashion
 
-## Day15: Coffee Machine
+## Day 19: Instances, State and Higher Order Functions
 
-Implementing a coffee machine simulator, with resources, different menu items to be handled diferently and a coin based system of pay, which is supposed accept or reject payments.
-All functions made with the Menu in data, so adding new itmes is a posibility, as well as removing.
-
-## Day 16: Object Oriented Programing
-
-Object oriented programing means the existance of building blocks for futher use, called objects, that have specific methods to do specific actions or changes within the specific object. Such as a car, having a specific color, acceleration, speed etc.
-The car might be a good example, but using the [turtle](https://docs.python.org/3/library/turtle.html) built in package for python is a good example to learn the specifics of classes and methods.
-We will build the coffee machine with an object oriented variation.
-
-Creating specific classes and objects that can be modified and used acordingly to make the coffee machine in a more detailed, sustainable and scalable way.
-
-## Day 17: Quiz game OOP
-
-Using the objet oriented method to build a question class that can read and save data from a dictionary type file, easily modifiable from JSON files, obteined from [Open Trivia](https://opentdb.com/), the quiz questions can be easily modified with a simple mod to the JSON file.
-Using a quiz structure that provides the next question, validats the answer and keeps track of the score.
-This is a good example of how OOP provides proper scalability for projects, as parts work independant from each other and can be modified acordingly.
+Object, clases can be instanced multiple timnes, each having it own state. Thus using multiple objects of the same class, in different specific states.
+Higher order functions, are refered to those functions that recieve a function as part of their input, to be used within the function.
+In day 19, we build 2 projects, a turtles race and an Etch-a-sketch. Both using the turtle package.
 
 ## Day 18: Turtle graphics
 
@@ -131,105 +114,122 @@ source .venv/bin/activate
 '''
 then use the needed pip install, and to run, .venv/bin/pyton3 is requiered for a proper run of python on the virtual environment.
 
-## Day 19: Instances, State and Higher Order Functions
+## Day 17: Quiz game OOP
 
-Object, clases can be instanced multiple timnes, each having it own state. Thus using multiple objects of the same class, in different specific states.
-Higher order functions, are refered to those functions that recieve a function as part of their input, to be used within the function.
-In day 19, we build 2 projects, a turtles race and an Etch-a-sketch. Both using the turtle package.
+Using the objet oriented method to build a question class that can read and save data from a dictionary type file, easily modifiable from JSON files, obteined from [Open Trivia](https://opentdb.com/), the quiz questions can be easily modified with a simple mod to the JSON file.
+Using a quiz structure that provides the next question, validats the answer and keeps track of the score.
+This is a good example of how OOP provides proper scalability for projects, as parts work independant from each other and can be modified acordingly.
 
-## Day 20: Snake Game part 1
+## Day 16: Object Oriented Programing
 
-Using turtle package and time package to make a snake, that moves through the screen. updating the screen after movement, and moving all to a snake class, as to make it in the object oriented programing fashion
+Object oriented programing means the existance of building blocks for futher use, called objects, that have specific methods to do specific actions or changes within the specific object. Such as a car, having a specific color, acceleration, speed etc.
+The car might be a good example, but using the [turtle](https://docs.python.org/3/library/turtle.html) built in package for python is a good example to learn the specifics of classes and methods.
+We will build the coffee machine with an object oriented variation.
 
-## Day 21: Finishing the Snake game
+Creating specific classes and objects that can be modified and used acordingly to make the coffee machine in a more detailed, sustainable and scalable way.
 
-Using the turtle package, finishing the snake game. This leason talks about inheritance, used in the "child" class or method, almost as an argument to the class and super as a method to call the same method from the parent.
-Slicing [start:finish:pase] neg pase reverses the slicing
+## Day 15: Coffee Machine
 
-## Day 22: Pong the arcade game
+Implementing a coffee machine simulator, with resources, different menu items to be handled diferently and a coin based system of pay, which is supposed accept or reject payments.
+All functions made with the Menu in data, so adding new itmes is a posibility, as well as removing.
 
-Again, with the turtle package, building an object oriente version of Pong.
+## Day 14: Higher Lower Game
 
-## Day 23: Frogger
+This is the first project with no specific topics before, just a description and example.
+This is a comparing game, where you lose when you miss the correct answer
 
-Similar to the Frogger game, cars and a turtle that can move forward. No lanes, no side movement or back, and no matter for superposition on cars.
+## Day 13: Debugging
 
-## Day 24: Snake and files
+A quick guide on how to use breakpoint line by line, go into with libraries or skipping libraries. Using print to confirm statements or values within the code, as well as using the debugger for step by step review. Stackoverflow and other reviews can also be done to achieve the best results on more complicated scenarios. Taking breaks and asking for external reviews might also prove to be a valuable tool.
 
-Using the prvious snake game, to make a game that does not end, and keeps track of the highest score on a separate file, so that it can be viewed and modified any time. Starting with scorekeeping and moving to a more complexe file reading and writing mechanism, with a program that writes emails from a template and a list of names.
+The main focus here is reviewing code can be dificult, but the try/exceptions are good tools to avoid input errors on working code, and debugging on step by step is one of the most powerful tools to check not working code.
 
-## Day 25: Pandas and Squirrel Census
+## Day 12: Guessing Game
 
-Using panda, from CSV you can get datasets to dataframes and dataseries, which each in turn can interact differently with pandas structures. getting statistical tools and calculations with much ease than simply reading files with python file opener, and even being able to create new dataframes and files.
-Pandas is a fairly powerfull tool.
+Just a guessing game, with random number creation and different dificulties. Using local and global scope as well as global constants and afecting global variables.
 
-States game, using turtle and a csv file of names and locations to make a guessing game of all 50 states, they autopopulate on map when guessed correctly. Using pandas to handle the dataframe from the file, and properly handle adding the names.
+## Day 11: Blackjack
 
-## Day 26: List comprehension and NATO alphabet
+A simple version of blackjack, using infinite deck and no jockers. All cards on the list are equal probability and the cards are not removed as they are drawn. The computer is the dealer.
 
-Upgrading the States game with list comprehension. In my specific scenario, removed a for loop, but no list is created with any for loops to move as a list comprehension.
+## Day 10: Function Output and Calculator
 
-Using list comprehension with dataframes to create new complex lists or dicctionaries.
+Simple chapter on function outputs and return statement on functions. Making a simple calculator with 2 input functions, that can go on as long as the user wants.
 
-## Day 27: Tkinter *args **kwargs and GUI
+### Docstrings
 
-Tkinter graphics interface,  using args and kwargs for diferent functions, *args refering to multiple arguments that already have a specific initial value when needed and kwargs for defining entries, basically giving a list of name and value for the function. If defined within the function, this will be used within, it is implemented for complexe functions/packages.
-The tkinter package as it is addapted from an older model it is easier to follow this less descriptive function use, and have utilities on the documentation.
+On defined functions, the first line usually is filled with a string declared with 3 quotes, this line shows when calling the function. With a simple description, this goes a long way to show clarity on bigger projects.
 
-## Day 28: Tkinter pomodoro timer
+## Day 9: Dictionaries, Nesting and Secret Auction
 
-A complete timer app that pops to the foreground when finished a 25min timer, to prompt for a break, the idea is to encourage following the pomodoro method for working times.
+### Dictionaries
 
-## Day 29: Tkinter password manager
+Dictionary is a specific sort of data that is stored as a pair of elements as key and value, the key is a specific one used to access the specific value asociated with the key.
+key -> value, it is in curly brackets and with a colon separation, elements in a doctionary are coma separated. Items can be added in the furture, as well as edited and removed, as any variable, they can be edited.
 
-Complete app to add new passwords or modify passwords for websites, on a saved file. Able to generate new passwords, following most website password rules, able to modify the rules as needed.
+### Nesting
 
-## Day 30: Exception handling
+being able to place a disctionary or a list as a value related to a specific key on a Disctionary, is called nesting. Key and value pairs are usefull a value can be asociated with anything, and it depends on the type it is that it will be handled that way. IE to access an item in a list value, it requieres to access through the key first, then as a list.
+Lists within lists is also a type of nesting. Nested lists seems like a good way to represent a matrix.
 
-When talking about Exceptions, it is what can go wrong but algo what might, could and maybe the unpredictable, but the main goal of an exception is to catch anything that might not work as intended by the use of any external input, or anything of the sort (IE the calculator trying to divide by 0). Files not found, not created or missing might also be a common to find. This day we added a layer of exception for file handling to the password manager and to the nato phonetics program.
+## Day 8: Function Parameters and Caesar Cipher
 
-## Day 31: Card Game
+Defining functions, parameters are used to create variables that can affect within the function. Parameters are variables that are used to call the function for even more specific cases.
 
-Using Tkinter, images and exception handling, created a program that helps study a language. Dowloading a database of the most common words of a language from [a git repo](https://github.com/hermitdave/FrequencyWords), then translating it with google sheets translate tool, and reducing the amount of words to a desired ammount. The program in this case uses the database of words and their translation to show words and the their translation and let you answer if the word has already been memorized. Non memorized words can be shown again, while already known words will be removed from the rotation, extracting data and saving a new file that will be checked for user progress each time.
+The Ceasar Cipher takes letters from the alphabet and shifts them by a specific amount, in order to encode or decode a message. Shifts here can be done in both senses, to decode. Symbols and other inputs are passed from one to the other, only items from the alphabet, but this could be easily modified to specific characters, making the coding even harder to decode.
 
-## Day 32: Birthday emailer
+## Day 7: Hangman
 
-Using a new email account, showing how to connect an email account to be able to access it and send emails with messages from files to different emails. Then being able to host and run this dayly on [a dedicated python hosting website](https://www.pythonanywhere.com/). I chose not to do this, to avoid passwords and emails on the code.
+Starting all projects with a flowchart to properly review the steps requiered is essential to keeping a proper order and a clear goal.
 
-## Day 33: ISS Overhead Notifier
+This project reviews previously learned items, except functions, strings, importing loops and validations in lists.
 
-building an email notofier with the ISS position [API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) ussing the [requests](https://docs.python-requests.org/en/latest/) library to handle the API request. [A quick guide on HTTP response codes](https://www.webfx.com/web-development/glossary/http-status-codes/).
-Also building a quick Kanye quotes Tkinter program, with the [Kanye quote API](https://kanye.rest/)
+The lists are very useful to access positions and replace positions on a streing, they can be joined to be printed as a single line on console.
 
-## Day 34: Quizzler
+## Day 6: Funtions and Karel
 
-The quizzler app is one build from the true or false question game, pulling new question from the API and using tkinter to update the UI to a grafics one. Being able to keep score, get right and wrong answers and dissable buttons at the end of questions. The main implementation is the new UI and API calls with simple updates that can keep using the previously completed project.
+### while loop
 
-## Day 35: Rain Notifier
+This kind of loop is not defined to stop unless a scenario is met, during the loop definition this condition should considered.
 
-Uses the OpenWeatherMap API to get data about forecast, setting a keyed API, and then a keyed service for SMSs or whatsapp API with twilio. Being able to notify while reviewing a more complicated API that is the openwethermap, as it contains lots of different data.
-Using enviroment variables to save keys and important data is key here, as it saves from exposure when publishing code. Even with free accounts, keys should not be public.
-In windows the variables must be saved, and can be accessed with the same os library.
-> $env: DCA_PHONE = 55554444111
+### Funtions
 
-## Day 36: Stock trading News Alert
+In python, to define a new function, def is used to announce said definition.
+Defining funtions does not make the be executed, as usual thi is used to define specific scenario functions and calling them for the requiered specific use.
+[Using Reeborgs World](https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json), to show use case of loops and function definitions.
 
-Using stock exchange API to track changes from closing days, to check for large change trends and review related news, to alert the user with news on large changes.
+## Day 5: Python Loops
 
-## Day 37: Pixela Habit tracker
+Use of for loop in python, general usage, "for in"  goes thru items in a list or numbers in a range, for numbered iterations.
 
-Usin API [Pixela](https://pixe.la/v1/users) to make an activity tracker, this is a color dots graph in the style of the git commitments tracker.
+A Random password generator asking for n of letter, symbols and numbers, then randomizing between selected random of each.
 
-## Day 38: Excercise tracker
+## Day 4: Randomisation and Python Lists
 
-Usin the Sheety API to handle a read and write google sheets document. Using the Udemy natural language LLM to read an input and get the type of activity, time and estimated calorie consumption to write the sheet acordingly.
+### Modules
 
-## Day 39: Flight deal tracker
+Importing [random module](https://docs.python.org/3/library/random.html) to use random functions.
+Modules are used to separate different specific functions or packages of fucntions to be used by others, random is one created by the Python team.
+Creating personal modules are imported and used as any other, with import function and calling variables or functions with the name pf the module and the item to use.
 
-Capstone project, using several API to build different classes to handle a sheet database, a city API to get info, a Serpapi to search for floght prices and telegrams API to use my personal bot for notifications on deals. This usses different APIs and a .env file to handle info outside of publication. Asi this is intended for Git, the .env file compiles API keys and personal urls.
-This project uses the [Ailabs](https://airlabs.co/docs/) API to search from the city name, the IATA code for the city. Then using the date time, the search is done for a 2 week travel set to be done 2 weeks from the day it is run. Using a constant as a departure city and the dates that can be modified if needed, using the [SerpApi](https://serpapi.com/google-flights-api) service of google flights search, getting the best flight from google flights result, as the price to compare to the set threshold.
-After comparison, the notifier class is used to notify the user using a personal bot channel.
+### Lists
 
-## Day 40: Flight price emailer
+[Lists](https://docs.python.org/3/tutorial/datastructures.html) are powerful datasets in python, being able to view specific items, add modify and substract on different positions. A list is stored in the specific order it is created.
+Lists can be nested to create more complex structures.
 
-This is the end of the capstone project, changing the deal tracker to be a person list emailer. Using a google form, to link to the sheet, adding personal info to a new sheet, for the notifier class to be modified and use the email connection API to send an email to each person, with the flight deals available at the run time, again a 2 week flight, in 2 weeks time from when the code is run.
+## Day 3: Control Flow and Logical Operators
+
+">" greater than, and ">=" greater or equal, use == and != for equal and not equal. Reminder of modulo division (residual of euclidian division) "%".
+Using if and elif, second conditionals with nested if statements.
+Logical operators, and or not (&& || !)
+treasure island, is a basic input game controlled by if statements and some art.
+
+## Day 2: Data types and manipulating Strings
+
+Simple math and strings, fstring add variables as a {x} easy imput for variables, ** used for pot calc and // for ecludian div, as well as python following PEDMAS.
+round() and type casting is used for specific scenarios, str() to convert to string, and int()
+Code is a simple bill calculator with tip and equal part division.
+
+## Day 1: Variables
+
+Inputs and printing, not much to say, straightforward naming and simple printing.
