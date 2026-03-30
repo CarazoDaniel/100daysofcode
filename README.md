@@ -1,5 +1,9 @@
 # 100 Days of coding complete python bootcamp
 
+## Day 41: HTML
+
+Creating a couple of html files to get a simple overview of how html is redacted, this is a very basic into.
+
 ## Day 40: Flight price emailer
 
 This is the end of the capstone project, changing the deal tracker to be a person list emailer. Using a google form, to link to the sheet, adding personal info to a new sheet, for the notifier class to be modified and use the email connection API to send an email to each person, with the flight deals available at the run time, again a 2 week flight, in 2 weeks time from when the code is run.
