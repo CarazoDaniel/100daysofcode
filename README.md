@@ -6,13 +6,14 @@ This is the end of the capstone project, changing the deal tracker to be a perso
 
 ## Day 39: Flight deal tracker
 
-Capstone project, using several API to build different classes to handle a sheet database, a city API to get info, a Serpapi to search for floght prices and telegrams API to use my personal bot for notifications on deals. This usses different APIs and a .env file to handle info outside of publication. Asi this is intended for Git, the .env file compiles API keys and personal urls.
-This project uses the [Ailabs](https://airlabs.co/docs/) API to search from the city name, the IATA code for the city. Then using the date time, the search is done for a 2 week travel set to be done 2 weeks from the day it is run. Using a constant as a departure city and the dates that can be modified if needed, using the [SerpApi](https://serpapi.com/google-flights-api) service of google flights search, getting the best flight from google flights result, as the price to compare to the set threshold.
+Capstone project, using several API to build different classes to handle a sheet database, a city API to get info, a Serpapi to search for flight prices and telegrams API to use my personal bot for notifications on deals. This usses different APIs and a .env file to handle info outside of publication. As this is intended for Git, the .env file compiles API keys and personal urls. \n
+
+This project uses the [Airlabs](https://airlabs.co/docs/) API to search from the city name, the IATA code for the city. Then using the date time, the search is done for a 2 week travel set to be done 2 weeks from the day it is run. Using a constant as a departure city and the dates that can be modified if needed, using the [SerpApi](https://serpapi.com/google-flights-api) service of google flights search, getting the best flight from google flights result, as the price to compare to the set threshold.
 After comparison, the notifier class is used to notify the user using a personal bot channel.
 
 ## Day 38: Excercise tracker
 
-Usin the Sheety API to handle a read and write google sheets document. Using the Udemy natural language LLM to read an input and get the type of activity, time and estimated calorie consumption to write the sheet acordingly.
+Usin the [Sheety API](https://dashboard.sheety.co/login) to handle a read and write google sheets document. Using the Udemy natural language excercice app to read an input and get the type of activity, time and estimated calorie consumption to write the sheet acordingly.
 
 ## Day 37: Pixela Habit tracker
 
@@ -20,7 +21,10 @@ Usin API [Pixela](https://pixe.la/v1/users) to make an activity tracker, this is
 
 ## Day 36: Stock trading News Alert
 
-Using stock exchange API to track changes from closing days, to check for large change trends and review related news, to alert the user with news on large changes.
+Using [stock exchange API](https://www.alphavantage.co) to track changes from closing days, to check for large change trends and review related news, to alert the user with the news/headlines from [News API](https://newsapi.org).
+Tried notifying with the Whatsapp API, but found no oficial API for use, just 3p APIs, that have templates, low customization and not the best integration for personal use.
+Thus decided to continue forward with a besic use of the telegram API that uses a personal chat ID and bot to notify me. This seems more scalable as it can be scaled to a channel with a notifications bot, adding people as needed or just keeping it for personal use. Can be scaled to use with different chats and bots by just modifying the env variables to acomodate for the tokens needed without needing to update the code.
+
 
 ## Day 35: Rain Notifier
 
@@ -28,6 +32,7 @@ Uses the OpenWeatherMap API to get data about forecast, setting a keyed API, and
 Using enviroment variables to save keys and important data is key here, as it saves from exposure when publishing code. Even with free accounts, keys should not be public.
 In windows the variables must be saved, and can be accessed with the same os library.
 > $env: DCA_PHONE = 55554444111
+Decided against continued used of the twilio API SMS notificator as it has limits on credit and this doesn't seem usefull for personal use when other free alternatives could be used.
 
 ## Day 34: Quizzler
 
