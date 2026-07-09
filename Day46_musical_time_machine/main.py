@@ -18,13 +18,13 @@ playlists = yt.get_library_playlists()
 playlist_id = 0
 for playlist in playlists:
     if playlist["title"] == playlist_name:
-        print(playlist)
-# if playlist_id == 0:
-#     playlist_id = yt.create_playlist(title=playlist_name,description=playlist_name,privacy_status="PRIVATE")
+        playlist_id = playlist["playlistId"]
+if playlist_id == 0:
+    playlist_id = yt.create_playlist(title=playlist_name,description=playlist_name,privacy_status="PRIVATE")
 
-# for index,song in enumerate(list_of_songs):
-#     try:
-#         next_song = yt.search(query=f"{list_of_artists[index]} {song}", filter="songs", limit=1)
-#         yt.add_playlist_items(playlist_id,[next_song[0]["videoId"]])
-#     except Exception as e:
-#         print(f"skipped {song} by {list_of_artists[index]} due to {e}")   
+for index,song in enumerate(list_of_songs):
+    try:
+        next_song = yt.search(query=f"{list_of_artists[index]} {song}", filter="songs", limit=1)
+        yt.add_playlist_items(playlist_id,[next_song[0]["videoId"]])
+    except Exception as e:
+        print(f"skipped {song} by {list_of_artists[index]} due to {e}")   
