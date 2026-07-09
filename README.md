@@ -1,5 +1,25 @@
 # 100 Days of coding complete python bootcamp
 
+## Day 46: Musical Time machine
+
+Using web scraping to get a top 100 chart on a specific date, then building a playlist with the spotify API with the pulled list.
+
+## Day 45: Web Scraping
+
+Using [beautiful soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) to pull data from other HTML files, to create a new site wyth pyton coding, using beautiful soup class.
+
+## Day 44: Intermediate CSS
+
+Using fonts, styles and different sizing and modifications on a style file to target specific areas in an HTML, using classes to properly handle the styling.
+
+## Day 43: Intro to CSS
+
+CSS is an addition to HTMl that lets us style acording to the needs of visual, chaging features and characteristics of the items on the site. From modifying a specific heading, a single item that is tagged, a class of items or even the whole site.
+
+## Day 42: Intermediate HTML
+
+Finishing the HTML basics, anchors, lists, indentation and boilerplates, to properly create simple websites that can be further styled later on.
+
 ## Day 41: HTML
 
 Creating a couple of html files to get a simple overview of how html is redacted, this is a very basic into.
