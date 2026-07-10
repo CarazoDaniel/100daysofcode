@@ -1,5 +1,9 @@
 # 100 Days of coding complete python bootcamp
 
+## Day 47: Amazon price tracker
+
+Again with webscraping, making a script that pulls a live value for an item price, and compares to a set value for the item, and notifies the user if the price is lower than the set goal. Using an amazon clone for stability on design changes to live pages.
+
 ## Day 46: Musical Time machine
 
 Using web scraping to get a top 100 chart on a specific date, then building a playlist with the spotify API with the pulled list.
