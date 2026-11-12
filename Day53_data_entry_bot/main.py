@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ec
 from bs4 import BeautifulSoup
 import smtplib
 import requests
@@ -32,9 +33,49 @@ list_of_links = [ link['href'] for link in soup.find_all(name = "a" , class_="pr
 
 list_of_prices = [price.getText() for price in soup.find_all(name = "span" , class_="PropertyCardWrapper__StyledPriceLine")]
 list_of_prices = [price.replace("+",'') for price in list_of_prices]
+list_of_prices = [price.replace("$",'') for price in list_of_prices]
+list_of_prices = [price.replace("/mo",'') for price in list_of_prices]
+list_of_prices = [price.replace(" 1 bd",'') for price in list_of_prices]
+list_of_prices = [price.replace(" 1bd",'') for price in list_of_prices]
 
-list_of_address = [address.getText() for address in soup.find_all(name = "address")]
+list_of_prices = [price.replace(" 2 bd",'') for price in list_of_prices]
+list_of_prices = [price.replace(" 2bd",'') for price in list_of_prices]
 
-print(list_of_address)
-print(list_of_links)
-print(list_of_prices)
+list_of_prices = [price.replace(" 3 bd",'') for price in list_of_prices]
+list_of_prices = [price.replace(" 3bd",'') for price in list_of_prices]
+
+list_of_prices = [price.replace(",",'') for price in list_of_prices]
+
+
+list_of_address = [address.getText().strip() for address in soup.find_all(name = "address")]
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_experimental_option("detach", True)
+user_data_dir = os.path.join(os.getcwd(), "chrome_profile")
+chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
+
+driver = webdriver.Chrome(options=chrome_options)
+wait = WebDriverWait(driver, timeout=2)
+
+count = len(list_of_address)
+
+for index in range(count+1):
+    sleep(2)
+    driver.get(GOOGLE_FORM)
+    
+    inputs = wait.until(ec.presence_of_all_elements_located((By.CSS_SELECTOR,".whsOnd.zHQkBf")))
+
+    address_input = inputs[0]
+    address_input.clear()
+    address_input.send_keys(list_of_address[index])
+    
+    price_input = inputs[1]
+    price_input.clear()
+    price_input.send_keys(list_of_prices[index])
+    
+    link_input = inputs[2]
+    link_input.clear()
+    link_input.send_keys(list_of_links[index])
+    
+    submit_button = driver.find_element(By.CSS_SELECTOR, ".NPEfkd.RveJvd.snByac")
+    submit_button.click()
